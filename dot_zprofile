@@ -1,2 +1,3 @@
 eval "$(/opt/homebrew/bin/brew shellenv)"
+export POSH_CACHE_PATH="$HOME/.cache/omp.cache"
 eval "$(oh-my-posh init zsh --config ~/.config/ohmyposh/mytheme.omp.json)"
