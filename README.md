@@ -16,3 +16,6 @@
 5. `sudo gem install cocoapods`
 
 
+### Brew standalone installs
+1. `brew install neovim`
+2. `brew install nvm` - configured in zprofile
