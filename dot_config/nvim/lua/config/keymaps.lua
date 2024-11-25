@@ -26,10 +26,10 @@ map({'n','v'}, '<leader>ec', '<cmd>:NvimTreeClose<cr>', {desc = 'Close Directory
 
 
 -- telescope
-local ts_builtin = require("telescope.builtin")
-map({'n','v'}, '<leader> ', ts_builtin.find_files, {desc = 'Telescope Find files'})
-map({'n','v'}, '<leader>fg', ts_builtin.live_grep, {desc = 'Telescope Live Grep'})
-map({'n','v'}, '<leader>ff', ts_builtin.builtin, {desc = 'Telescope Lists Pickers'})
+map({'n','v'}, '<leader> ', '<cmd>Telescope find_files<cr>', {desc = 'Telescope Find files'})
+map({'n','v'}, '<leader>fg', '<cmd>Telescope live_grep<cr>', {desc = 'Telescope Live Grep'})
+map({'n','v'}, '<leader>ff', '<cmd>Telescope builtin<cr>', {desc = 'Telescope Lists Pickers'})
+map({'n','v'}, '<leader>fp', '<cmd>Telescope projects<cr>', {desc = 'Telescope Lists Pickers'})
 
 -- leap
 map({'n','v'}, 'f', '<Plug>(leap)', {desc = 'Jump to local text'})
