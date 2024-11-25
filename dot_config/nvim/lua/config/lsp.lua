@@ -2,6 +2,7 @@ require("mason").setup()
 require("mason-lspconfig").setup({
   automatic_installation = true
 })
+local lspconfig = require("lspconfig")
 
-require("lspconfig").lua_ls.setup {}
-require("lspconfig").dartls.setup {}
+lspconfig.lua_ls.setup {}
+lspconfig.dartls.setup {}
