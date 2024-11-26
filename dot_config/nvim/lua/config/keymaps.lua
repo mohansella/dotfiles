@@ -29,7 +29,12 @@ map({ 'n', 'v' }, '<leader>ec', '<cmd>:NvimTreeClose<cr>', { desc = 'Close Direc
 map({ 'n', 'v' }, '<leader> ', '<cmd>Telescope find_files<cr>', { desc = 'Telescope Find files' })
 map({ 'n', 'v' }, '<leader>fg', '<cmd>Telescope live_grep<cr>', { desc = 'Telescope Live Grep' })
 map({ 'n', 'v' }, '<leader>ff', '<cmd>Telescope builtin<cr>', { desc = 'Telescope Lists Pickers' })
+-- telescope extensions
 map({ 'n', 'v' }, '<leader>fp', '<cmd>Telescope projects<cr>', { desc = 'Telescope Lists Projects' })
 
 -- code
 map({ 'n', 'v' }, '<leader>cf', '<cmd>:lua vim.lsp.buf.format()<cr>', { desc = 'Format using conform' })
+map({ 'n', 'v' }, 'gd', '<cmd>Telescope lsp_definitions<cr>', { desc = 'Goto Definition' })
+map({ 'n', 'v' }, 'gr', '<cmd>Telescope lsp_references<cr>', { desc = 'References' })
+map({ 'n', 'v' }, 'gI', '<cmd>Telescope lsp_implementations<cr>', { desc = 'Goto Implementation' })
+map({ 'n', 'v' }, 'gy', '<cmd>Telescope lsp_type_definitions<cr>', { desc = 'Goto T[y]pe definitions' })

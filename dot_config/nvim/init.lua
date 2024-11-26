@@ -8,5 +8,4 @@ require("config.lazy")
 require("config.keymaps")
 
 -- personal: setup code
-require("config.lsp")
-require("config.treesitter")
+require("config.code")
