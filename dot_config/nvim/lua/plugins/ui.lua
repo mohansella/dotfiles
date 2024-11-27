@@ -1,8 +1,15 @@
 local M = {
   {
     "catppuccin/nvim",
-    config = function()
-      require("catppuccin")
+    priority = 1000,
+    opts = {
+      mason = true,
+      noice = true,
+      notify = true,
+      which_key = true
+    },
+    config = function(_, opts)
+      require("catppuccin").setup(opts)
       vim.cmd("colorscheme catppuccin")
     end
   },

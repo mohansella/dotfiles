@@ -9,6 +9,7 @@ vim.o.smartindent = true
 vim.o.number = true
 vim.o.relativenumber = true
 vim.o.cursorline = true
+vim.o.wrap = false
 
 -- file tree: disable netrw loading
 vim.g.loaded_netrw = 1

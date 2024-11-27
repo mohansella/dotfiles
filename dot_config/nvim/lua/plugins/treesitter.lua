@@ -4,7 +4,10 @@ local M = {
     opts = {
       ensure_installed = { "lua", "dart" },
       auto_install = true,
-      highlight = { enable = true },
+      highlight = {
+        enable = true,
+        additional_vim_regex_highlighting = false
+      },
       indent = { enable = true },
       playground = {
         enable = true,
