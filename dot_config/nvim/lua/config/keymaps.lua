@@ -5,6 +5,8 @@ map("i", "<C-h>", "<Left>", { desc = "move left" })
 map("i", "<C-l>", "<Right>", { desc = "move right" })
 map("i", "<C-j>", "<Down>", { desc = "move down" })
 map("i", "<C-k>", "<Up>", { desc = "move up" })
+-- others
+map("n", "<Esc>", "<cmd>noh<CR>", { desc = "general clear highlights" })
 
 -- buffer
 map({ 'n', 'v' }, '<leader>qq', '<cmd>qa!<cr>', { desc = 'Force Quit all' })
@@ -39,5 +41,5 @@ map({ 'n', 'v' }, 'gd', '<cmd>Telescope lsp_definitions<cr>', { desc = 'Goto Def
 map({ 'n', 'v' }, 'gr', '<cmd>Telescope lsp_references<cr>', { desc = 'References' })
 map({ 'n', 'v' }, 'gI', '<cmd>Telescope lsp_implementations<cr>', { desc = 'Goto Implementation' })
 map({ 'n', 'v' }, 'gy', '<cmd>Telescope lsp_type_definitions<cr>', { desc = 'Goto T[y]pe definitions' })
-map({ 'n', 'v' }, '<leader>cf', '<cmd>:lua vim.lsp.buf.format()<cr>', { desc = 'Format using conform' })
+map({ 'n', 'v' }, '<leader>cf', function() require("conform").format({ lsp_fallback = true }) end, { desc = 'Format using conform' })
 map({ 'n', 'v' }, '<leader>cr', '<cmd>:lua vim.lsp.buf.rename()<cr>', { desc = 'Rename' })

@@ -25,6 +25,9 @@ local M = {
       require('noice').setup(opts)
       require("telescope").load_extension("noice")
     end
+  },
+  {
+    'lewis6991/gitsigns.nvim'
   }
 }
 
