@@ -1,14 +1,26 @@
 local map = vim.keymap.set
 
+-- common functions
+local function luasnip_jump(val)
+  local ls = require("luasnip")
+  if ls.jumpable(val) then
+    return ls.jump(val)
+  end
+  local code = val == 1 and "<Down>" or "<Up>"
+  local codes = vim.api.nvim_replace_termcodes(code, true, false, true)
+  vim.api.nvim_feedkeys(codes, "n", true)
+end
+
 -- motions
 map("i", "<C-h>", "<Left>", { desc = "move left" })
 map("i", "<C-l>", "<Right>", { desc = "move right" })
-map("i", "<C-j>", "<Down>", { desc = "move down" })
-map("i", "<C-k>", "<Up>", { desc = "move up" })
+map("i", "<C-j>", function() luasnip_jump(1) end, { desc = "move down" })
+map("i", "<C-k>", function() luasnip_jump(-1) end, { desc = "move up" })
 -- others
 map("n", "<Esc>", "<cmd>noh<CR>", { desc = "general clear highlights" })
 
 -- buffer
+map({ 'n', 'v' }, '<leader>qa', '<cmd>qa<cr>', { desc = 'Quit all' })
 map({ 'n', 'v' }, '<leader>qq', '<cmd>qa!<cr>', { desc = 'Force Quit all' })
 map({ 'n', 'v' }, '<leader>qw', '<cmd>wqa<cr>', { desc = 'Save and Quit all' })
 map({ 'n', 'v' }, '<leader>x', '<cmd>close<cr>', { desc = 'Close current window' })
@@ -33,6 +45,7 @@ map({ 'n', 'v' }, '<leader>ec', '<cmd>:NvimTreeClose<cr>', { desc = 'Close Direc
 map({ 'n', 'v' }, '<leader> ', '<cmd>Telescope find_files<cr>', { desc = 'Telescope Find files' })
 map({ 'n', 'v' }, '<leader>fg', '<cmd>Telescope live_grep<cr>', { desc = 'Telescope Live Grep' })
 map({ 'n', 'v' }, '<leader>ff', '<cmd>Telescope builtin<cr>', { desc = 'Telescope Lists Pickers' })
+map({ 'n', 'v' }, '<leader>fo', '<cmd>Telescope oldfiles<cr>', { desc = 'Telescope Old files' })
 -- telescope extensions
 map({ 'n', 'v' }, '<leader>fp', '<cmd>Telescope projects<cr>', { desc = 'Telescope Lists Projects' })
 
@@ -41,5 +54,6 @@ map({ 'n', 'v' }, 'gd', '<cmd>Telescope lsp_definitions<cr>', { desc = 'Goto Def
 map({ 'n', 'v' }, 'gr', '<cmd>Telescope lsp_references<cr>', { desc = 'References' })
 map({ 'n', 'v' }, 'gI', '<cmd>Telescope lsp_implementations<cr>', { desc = 'Goto Implementation' })
 map({ 'n', 'v' }, 'gy', '<cmd>Telescope lsp_type_definitions<cr>', { desc = 'Goto T[y]pe definitions' })
-map({ 'n', 'v' }, '<leader>cf', function() require("conform").format({ lsp_fallback = true }) end, { desc = 'Format using conform' })
+map({ 'n', 'v' }, '<leader>cf', function() require("conform").format({ lsp_fallback = true }) end,
+  { desc = 'Format using conform' })
 map({ 'n', 'v' }, '<leader>cr', '<cmd>:lua vim.lsp.buf.rename()<cr>', { desc = 'Rename' })

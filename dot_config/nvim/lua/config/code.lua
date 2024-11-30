@@ -5,8 +5,10 @@ require("mason-lspconfig").setup({
 })
 local lspconfig = require("lspconfig")
 
-lspconfig.lua_ls.setup {}
-lspconfig.dartls.setup {}
+-- Set up lspconfig.
+local capabilities = require('cmp_nvim_lsp').default_capabilities()
+lspconfig.lua_ls.setup {capabilities = capabilities}
+lspconfig.dartls.setup {capabilities = capabilities}
 
 -- treesitter config
 require('nvim-treesitter.configs').setup({
