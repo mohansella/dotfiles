@@ -22,3 +22,8 @@ vim.o.undofile = true
 
 -- scroll
 vim.o.scrolloff = 8
+vim.o.signcolumn = "yes"
+
+-- update time. e.g, lsp
+vim.o.updatetime = 250
+

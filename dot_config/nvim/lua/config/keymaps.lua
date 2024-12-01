@@ -58,3 +58,20 @@ map({ 'n', 'v' }, '<leader>cf', function() require("conform").format({ lsp_fallb
 map({ 'n', 'v' }, '<leader>cr', '<cmd>:lua vim.lsp.buf.rename()<cr>', { desc = 'Rename' })
 map({ 'n', 'v' }, '<leader>cd', function() vim.diagnostic.open_float(nil, { scope = "line" }) end, { desc = 'Line Diagnostics' })
 map({ 'n', 'v' }, '<leader>ca', '<cmd>:lua vim.lsp.buf.code_action()<cr>', { desc = 'Code Action' })
+
+
+-- From Primeagen
+map("v", "J", ":m '>+1<CR>gv=gv")
+map("v", "K", ":m '<-2<CR>gv=gv")
+
+map("n", "J", "mzJ`z")
+map("n", "<C-d>", "<C-d>zz")
+map("n", "<C-u>", "<C-u>zz")
+map("n", "n", "nzzzv")
+map("n", "N", "Nzzzv")
+
+
+-- greatest remap ever
+map("x", "<leader>p", [["_dP]], {desc = "Paste over void"})
+
+map("n", "Q", "<nop>")
