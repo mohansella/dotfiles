@@ -60,6 +60,9 @@ map({ 'n', 'v' }, '<leader>cd', function() vim.diagnostic.open_float(nil, { scop
 map({ 'n', 'v' }, '<leader>ca', '<cmd>:lua vim.lsp.buf.code_action()<cr>', { desc = 'Code Action' })
 
 
+map("n", "<leader>u", '<cmd>UndotreeToggle<cr>', {desc = "Toggle Undo Tree"})
+
+
 -- From Primeagen
 map("v", "J", ":m '>+1<CR>gv=gv")
 map("v", "K", ":m '<-2<CR>gv=gv")
@@ -72,6 +75,6 @@ map("n", "N", "Nzzzv")
 
 
 -- greatest remap ever
-map("x", "<leader>p", [["_dP]], {desc = "Paste over void"})
+map("x", "<leader>p", '"_dP', {desc = "Paste over void"})
 
 map("n", "Q", "<nop>")

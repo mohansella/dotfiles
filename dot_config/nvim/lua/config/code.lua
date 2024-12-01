@@ -9,10 +9,11 @@ local lspconfig = require("lspconfig")
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
 lspconfig.lua_ls.setup {capabilities = capabilities}
 lspconfig.dartls.setup {capabilities = capabilities}
+lspconfig.clangd.setup {capabilities = capabilities}
 
 -- treesitter config
 require('nvim-treesitter.configs').setup({
-  ensure_installed = { "lua", "dart" },
+  ensure_installed = { "lua", "dart", "c", "cpp" },
   auto_install = true,
   highlight = { enable = true },
   indent = { enable = false },
