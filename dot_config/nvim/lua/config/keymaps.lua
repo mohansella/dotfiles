@@ -34,12 +34,13 @@ map({ 'n', 'v' }, '<leader>l', '<cmd>Lazy<cr>', { desc = 'Open Lazy' })
 map({ 'n', 'v' }, '<leader>cm', '<cmd>Mason<cr>', { desc = 'Open Mason' })
 
 -- explorer: oil
-map({ 'n', 'v' }, '<leader>el', '<cmd>:lua require("oil").toggle_float()<cr>', { desc = 'Open Directory with Oil' })
+map({ 'n', 'v' }, '<leader>El', '<cmd>:lua require("oil").toggle_float()<cr>', { desc = 'Open Directory with Oil' })
 
 -- explorer: nvim-tree
-map({ 'n', 'v' }, '<leader>eo', '<cmd>:NvimTreeFocus<cr>', { desc = 'Open Directory Tree' })
-map({ 'n', 'v' }, '<leader>et', '<cmd>:NvimTreeToggle<cr>', { desc = 'Toggle Directory Tree' })
-map({ 'n', 'v' }, '<leader>ec', '<cmd>:NvimTreeClose<cr>', { desc = 'Close Directory Tree' })
+map({ 'n', 'v' }, '<leader>e', '<cmd>:NvimTreeFocus<cr>', { desc = 'Open Directory Tree' })
+map({ 'n', 'v' }, '<leader>Eo', '<cmd>:NvimTreeFocus<cr>', { desc = 'Open Directory Tree' })
+map({ 'n', 'v' }, '<leader>Et', '<cmd>:NvimTreeToggle<cr>', { desc = 'Toggle Directory Tree' })
+map({ 'n', 'v' }, '<leader>Ec', '<cmd>:NvimTreeClose<cr>', { desc = 'Close Directory Tree' })
 
 -- telescope
 map({ 'n', 'v' }, '<leader> ', '<cmd>Telescope find_files<cr>', { desc = 'Telescope Find files' })
@@ -59,8 +60,11 @@ map({ 'n', 'v' }, '<leader>cr', '<cmd>:lua vim.lsp.buf.rename()<cr>', { desc = '
 map({ 'n', 'v' }, '<leader>cd', function() vim.diagnostic.open_float(nil, { scope = "line" }) end, { desc = 'Line Diagnostics' })
 map({ 'n', 'v' }, '<leader>ca', '<cmd>:lua vim.lsp.buf.code_action()<cr>', { desc = 'Code Action' })
 
+-- undo tree
+map("n", "<leader>u", '<cmd>UndotreeToggle<cr><cmd>UndotreeFocus<cr>', {desc = "Toggle Undo Tree"})
 
-map("n", "<leader>u", '<cmd>UndotreeToggle<cr>', {desc = "Toggle Undo Tree"})
+-- aerial nav
+map({ 'n', 'v' }, '<leader>a', '<cmd>AerialOpen<cr>', { desc = 'Open AerialNav' })
 
 
 -- From Primeagen
