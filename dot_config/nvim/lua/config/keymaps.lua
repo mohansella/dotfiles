@@ -17,11 +17,11 @@ map("i", "<C-l>", "<Right>", { desc = "move right" })
 map("i", "<C-j>", function() luasnip_jump(1) end, { desc = "move down" })
 map("i", "<C-k>", function() luasnip_jump(-1) end, { desc = "move up" })
 -- others
-map("n", "<Esc>", "<cmd>noh<CR>", { desc = "general clear highlights" })
+map("n", "<Esc>", "<cmd>noh<cr><cmd>:NoiceDismiss<cr>", { desc = "general clear highlights" })
 
 -- buffer
-map({ 'n', 'v' }, '<leader>qa', '<cmd>qa<cr>', { desc = 'Quit all' })
-map({ 'n', 'v' }, '<leader>qq', '<cmd>qa!<cr>', { desc = 'Force Quit all' })
+map({ 'n', 'v' }, '<leader>qq', '<cmd>qa<cr>', { desc = 'Quit all' })
+map({ 'n', 'v' }, '<leader>qf', '<cmd>qa!<cr>', { desc = 'Force Quit all' })
 map({ 'n', 'v' }, '<leader>qw', '<cmd>wqa<cr>', { desc = 'Save and Quit all' })
 map({ 'n', 'v' }, '<leader>x', '<cmd>close<cr>', { desc = 'Close current window' })
 map({ 'n', 'v' }, '<leader>w', '<cmd>w<cr>', { desc = 'Write current buffer' })
@@ -47,6 +47,7 @@ map({ 'n', 'v' }, '<leader> ', '<cmd>Telescope find_files<cr>', { desc = 'Telesc
 map({ 'n', 'v' }, '<leader>fg', '<cmd>Telescope live_grep<cr>', { desc = 'Telescope Live Grep' })
 map({ 'n', 'v' }, '<leader>ff', '<cmd>Telescope builtin<cr>', { desc = 'Telescope Lists Pickers' })
 map({ 'n', 'v' }, '<leader>fo', '<cmd>Telescope oldfiles<cr>', { desc = 'Telescope Old files' })
+map({ 'n', 'v' }, '<leader>fb', '<cmd>Telescope buffers<cr>', { desc = 'Telescope Buffers' })
 -- telescope extensions
 map({ 'n', 'v' }, '<leader>fp', '<cmd>Telescope projects<cr>', { desc = 'Telescope Lists Projects' })
 

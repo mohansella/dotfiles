@@ -31,6 +31,9 @@ local M = {
       require("project_nvim").setup(opts)
       require('telescope').load_extension('projects')
     end
+  },
+  {
+    'tpope/vim-fugitive'
   }
 }
 
