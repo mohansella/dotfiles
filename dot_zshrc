@@ -11,6 +11,8 @@ export PATH=$PATH:$ANDROID_SDK_ROOT/emulator
 export PATH=$PATH:$ANDROID_SDK_ROOT/platform-tools
 export PATH=$PATH:$ANDROID_SDK_ROOT/tools
 
+#include rust
+export PATH=$PATH:~/.cargo/bin
 
 # Added by `rbenv init` on Wed Oct 30 16:29:16 IST 2024
 eval "$(rbenv init - --no-rehash zsh)"
