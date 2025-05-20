@@ -1,10 +1,18 @@
-1. Install `Chrome`
-2. Install `Brew` directly from shell
-3. `brew install git`
-4. `brew install gh`
-5. `gh auth login`
-6. run `chezmoi init git@github.com:mohansella/dotfiles.git`
+Below steps common for both MacOS and ubuntu (hoping other linux distros too)
 
+### Dotfiles management
+1. Install `Chrome` from site.
+2. Install `Brew` directly from shell.
+3. Install git `brew install git`
+4. Install github tools `brew install gh`
+5. Login with browser `gh auth login`
+6. Install chezmoi `brew install chezmoi`
+7. Restart shell and run `chezmoi init git@github.com:mohansella/dotfiles.git`
+8. Apply chezmoi selectively in a directory `chezmoi apply .` or `chezmoi update` as a whole.
+
+### NeoVim setup
+1. Install neovim `brew install neovim`
+2. Install g++ `brew install g++`
 
 ### Install Flutter dependencies
 1. `brew install flutter`
@@ -17,5 +25,4 @@
 
 
 ### Brew standalone installs
-1. `brew install neovim`
-2. `brew install nvm` - configured in zprofile
+1. `brew install nvm` - configured in zprofile
