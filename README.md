@@ -1,27 +1,26 @@
-Below steps common for both MacOS and ubuntu (hoping other linux distros too)
+Below are the steps for both MacOS 💻 and Ubuntu 🖥 (hoping other linux distros too)
 
-### Dotfiles management
-1. Install `Chrome` from site.
-2. Install `Brew` directly from shell.
-3. Install git `brew install git`
-4. Install github tools `brew install gh`
-5. Login with browser `gh auth login`
-6. Install chezmoi `brew install chezmoi`
-7. Restart shell and run `chezmoi init git@github.com:mohansella/dotfiles.git`
-8. Apply chezmoi selectively in a directory `chezmoi apply .` or `chezmoi update` as a whole.
+### Baseline tools steps
+1. 💻🖥 Install `Chrome`.
+2. 🖥 Install basics for brew `sudo apt install git curl g++ build-essential tree`
+3. 💻🖥 Install `Brew` directly from shell using scrits from `https://brew.sh`.
+4. 💻🖥 Install github tools `brew install gh`
+5. 💻🖥 Auth git via browser `gh auth login`
+6. 🖥 Might need to setup github ssh with a.generate one: `ssh-keygen -t rsa -b 4096 -C "your_email@example.com"`, b.start agent `eval "$(ssh-agent -s)"` and c.add key `ssh-add ~/.ssh/id_rsa`
+7. 💻🖥 Install chezmoi `brew install chezmoi`
+8. 💻🖥 Initialize chezmoi `chezmoi init git@github.com:mohansella/dotfiles.git`.
+9. 💻🖥 Apply chezmoi selectively in a directory `chezmoi apply .` or `chezmoi update` as a whole.
 
-### NeoVim setup
-1. Install neovim `brew install neovim`
-2. Install g++ `brew install g++`
+### shell PDE with neovim, tmux, ohmyposh
+1. 💻🖥 Install neovim `brew install neovim`
+2. 
 
 ### Install Flutter dependencies
-1. `brew install flutter`
-
-2. `brew install android-studio`
-3. open studio and install commandline-tools in sdkmanager
-
-4. `brew install rbenv` and install 3.3.5 or max for ruby
-5. `sudo gem install cocoapods`
+1. 💻🖥 `brew install flutter`
+2. 💻🖥 `brew install android-studio`
+3. 💻🖥 open studio and install commandline-tools in sdkmanager
+4. 💻 `brew install rbenv` and install 3.3.5 or max for ruby
+5. 💻 `sudo gem install cocoapods`
 
 
 ### Brew standalone installs
