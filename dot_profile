@@ -1,0 +1,5 @@
+#setup brew shell environment
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+
+#beautify shell with oh-my-posh
+eval "$(oh-my-posh init bash --config ~/.config/ohmyposh/mytheme.omp.json)"
