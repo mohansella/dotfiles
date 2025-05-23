@@ -12,8 +12,10 @@ Below are the steps for both MacOS 💻 and Ubuntu 🖥 (hoping other linux dist
 9. 💻🖥 Apply chezmoi selectively in a directory `chezmoi apply .` or `chezmoi update` as a whole.
 
 ### shell PDE with neovim, tmux, ohmyposh
-1. 💻🖥 Install neovim `brew install neovim`
-2. 
+1. 💻🖥 Install OhMyPosh `brew install oh-my-posh`
+2. 💻🖥 Install Nerd Fonts via OhMyPosh using `oh-my-posh install font`
+3. 💻🖥 Install neovim `brew install neovim` and can install `brew install ripgrep`
+4. 💻🖥 Install tmux `brew install tmux`
 
 ### Install Flutter dependencies
 1. 💻🖥 `brew install flutter`
