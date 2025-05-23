@@ -48,8 +48,6 @@ map({ 'n', 'v' }, '<leader>fg', '<cmd>Telescope live_grep<cr>', { desc = 'Telesc
 map({ 'n', 'v' }, '<leader>ff', '<cmd>Telescope builtin<cr>', { desc = 'Telescope Lists Pickers' })
 map({ 'n', 'v' }, '<leader>fo', '<cmd>Telescope oldfiles<cr>', { desc = 'Telescope Old files' })
 map({ 'n', 'v' }, '<leader>fb', '<cmd>Telescope buffers<cr>', { desc = 'Telescope Buffers' })
--- telescope extensions
-map({ 'n', 'v' }, '<leader>fp', '<cmd>Telescope projects<cr>', { desc = 'Telescope Lists Projects' })
 
 -- code
 map({ 'n', 'v' }, 'gd', '<cmd>Telescope lsp_definitions<cr>', { desc = 'Goto Definition' })
