@@ -1,6 +1,6 @@
 local M = {
-  { "williamboman/mason.nvim" },
-  { "williamboman/mason-lspconfig.nvim" },
+  { "mason-org/mason.nvim" },
+  { "mason-org/mason-lspconfig.nvim" },
   { "neovim/nvim-lspconfig" },
   {
     'stevearc/conform.nvim',
