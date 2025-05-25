@@ -6,7 +6,7 @@ export POSH_CACHE_PATH="$HOME/.cache/omp.cache"
 eval "$(oh-my-posh init zsh --config ~/.config/ohmyposh/mytheme.omp.json)"
 
 #include android sdk path
-export ANDROID_SDK_ROOT=/Users/mohan/Library/Android/sdk
+export ANDROID_SDK_ROOT=$HOME/Library/Android/sdk
 export PATH=$PATH:$ANDROID_SDK_ROOT/emulator
 export PATH=$PATH:$ANDROID_SDK_ROOT/platform-tools
 export PATH=$PATH:$ANDROID_SDK_ROOT/tools
