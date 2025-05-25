@@ -22,8 +22,9 @@ Below are the steps for both MacOS 💻 and Ubuntu 🖥 (hoping other linux dist
 1. 💻🖥 `brew install flutter`
 2. 💻🖥 `brew install android-studio`
 3. 💻🖥 open android studio and install commandline-tools in sdkmanager
-4. 💻 `brew install rbenv` and install 3.3.5 or max for ruby
+4. 💻 `brew install rbenv` and install latest ruby `rbenv install 3.3.5; rbenv shell 3.3.5`
 5. 💻 `sudo gem install cocoapods`
+6. 💻🖥 run `flutter doctor` to finalize
 
 
 ### Brew standalone installs
