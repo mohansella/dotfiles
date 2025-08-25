@@ -12,6 +12,9 @@ Below are the steps for both MacOS 💻 and Ubuntu 🖥 (hoping other linux dist
 9. 💻🖥 Initialize chezmoi `chezmoi init git@github.com:mohansella/dotfiles.git`.
 10. 💻🖥 Apply chezmoi selectively in a directory `chezmoi apply .` or `chezmoi update` as a whole.
 
+## Hardware connection
+11. 💻 Install karabiner-elements with `brew install --cask karabiner-elements`
+
 ### shell PDE with neovim, tmux, ohmyposh
 1. 💻🖥 Install Nerd Fonts `brew install font-jetbrains-mono-nerd-font`
 2. 💻🖥 Install OhMyPosh `brew install oh-my-posh`
