@@ -1,36 +1,203 @@
 {
-    "profiles": [
+  "profiles": [
+    {
+      "name": "Default profile",
+      "selected": true,
+      "virtual_hid_keyboard": {
+        "keyboard_type_v2": "ansi"
+      },
+      "simple_modifications": [
         {
-            "devices": [
-                {
-                    "identifiers": {
-                        "is_keyboard": true,
-                        "product_id": 1026,
-                        "vendor_id": 1266
-                    },
-                    "simple_modifications": [
-                        {
-                            "from": { "key_code": "left_option" },
-                            "to": [{ "key_code": "left_command" }]
-                        },
-                        {
-                            "from": { "key_code": "left_command" },
-                            "to": [{ "key_code": "left_option" }]
-                        },
-                        {
-                            "from": { "key_code": "right_option" },
-                            "to": [{ "key_code": "right_command" }]
-                        },
-                        {
-                            "from": { "key_code": "right_command" },
-                            "to": [{ "key_code": "right_option" }]
-                        }
-                    ]
-                }
-            ],
-            "name": "Default profile",
-            "selected": true,
-            "virtual_hid_keyboard": { "keyboard_type_v2": "ansi" }
+          "from": {
+            "key_code": "caps_lock"
+          },
+          "to": [
+            {
+              "key_code": "left_shift",
+              "modifiers": [
+                "left_command",
+                "left_control",
+                "left_option"
+              ]
+            }
+          ]
         }
-    ]
+      ],
+      "complex_modifications": {
+        "rules": [
+          {
+            "description": "Caps+L → Alacritty",
+            "manipulators": [
+              {
+                "type": "basic",
+                "from": {
+                  "modifiers": {
+                    "mandatory": [
+                      "control",
+                      "option",
+                      "command",
+                      "shift"
+                    ]
+                  },
+                  "key_code": "l"
+                },
+                "to": [
+                  {
+                    "shell_command": "open -a Alacritty"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "Caps+C → Chrome",
+            "manipulators": [
+              {
+                "type": "basic",
+                "from": {
+                  "modifiers": {
+                    "mandatory": [
+                      "control",
+                      "option",
+                      "command",
+                      "shift"
+                    ]
+                  },
+                  "key_code": "c"
+                },
+                "to": [
+                  {
+                    "shell_command": "open -a 'Google Chrome'"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "Caps+N → Notion",
+            "manipulators": [
+              {
+                "type": "basic",
+                "from": {
+                  "modifiers": {
+                    "mandatory": [
+                      "control",
+                      "option",
+                      "command",
+                      "shift"
+                    ]
+                  },
+                  "key_code": "n"
+                },
+                "to": [
+                  {
+                    "shell_command": "open -a Notion"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "Caps+I → iTerm2",
+            "manipulators": [
+              {
+                "type": "basic",
+                "from": {
+                  "modifiers": {
+                    "mandatory": [
+                      "control",
+                      "option",
+                      "command",
+                      "shift"
+                    ]
+                  },
+                  "key_code": "i"
+                },
+                "to": [
+                  {
+                    "shell_command": "open -a iTerm"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "Caps+G → ChatGPT",
+            "manipulators": [
+              {
+                "type": "basic",
+                "from": {
+                  "modifiers": {
+                    "mandatory": [
+                      "control",
+                      "option",
+                      "command",
+                      "shift"
+                    ]
+                  },
+                  "key_code": "g"
+                },
+                "to": [
+                  {
+                    "shell_command": "open -a 'ChatGPT'"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "devices": [
+        {
+          "identifiers": {
+            "is_keyboard": true,
+            "product_id": 1026,
+            "vendor_id": 1266
+          },
+          "simple_modifications": [
+            {
+              "from": {
+                "key_code": "left_option"
+              },
+              "to": [
+                {
+                  "key_code": "left_command"
+                }
+              ]
+            },
+            {
+              "from": {
+                "key_code": "left_command"
+              },
+              "to": [
+                {
+                  "key_code": "left_option"
+                }
+              ]
+            },
+            {
+              "from": {
+                "key_code": "right_option"
+              },
+              "to": [
+                {
+                  "key_code": "right_command"
+                }
+              ]
+            },
+            {
+              "from": {
+                "key_code": "right_command"
+              },
+              "to": [
+                {
+                  "key_code": "right_option"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
 }
