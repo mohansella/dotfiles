@@ -20,7 +20,8 @@ Below are the steps for both MacOS 💻 and Ubuntu 🖥 (hoping other linux dist
 1. 💻🖥 Install Nerd Fonts `brew install font-jetbrains-mono-nerd-font`
 2. 💻🖥 Install OhMyPosh `brew install oh-my-posh`
 3. 💻🖥 Install neovim `brew install neovim` and can install `brew install ripgrep`
-4. 💻🖥 Install tmux `brew install tmux`
+4. 💻🖥 Install tmux `brew install tmux` and run `C-b I` to install plugins
+5. 💻🖥 Install lazygit `brew install lazygit`
 
 ### Install Flutter dependencies
 1. 💻🖥 `brew install flutter`
