@@ -74,7 +74,7 @@
             ]
           },
           {
-            "description": "Caps+N → Notion",
+            "description": "Caps+T → Notion",
             "manipulators": [
               {
                 "type": "basic",
@@ -87,7 +87,7 @@
                       "shift"
                     ]
                   },
-                  "key_code": "n"
+                  "key_code": "t"
                 },
                 "to": [
                   {
