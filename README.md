@@ -23,6 +23,7 @@ Below are the steps for both MacOS 💻 and Ubuntu 🖥 (hoping other linux dist
 4. 💻🖥 Install tmux `brew install tmux` and run `C-b I` to install plugins
 5. 💻🖥 Install lazygit `brew install lazygit`
 6. 💻🖥 Install zoxide `brew install oxide`
+7. 💻🖥 Install zsh autosuggestions `brew install zsh-autosuggestions`
 
 ### Install Flutter dependencies
 1. 💻🖥 `brew install flutter`
