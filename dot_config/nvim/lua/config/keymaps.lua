@@ -77,7 +77,8 @@ map("n", "n", "nzzzv")
 map("n", "N", "Nzzzv")
 
 
--- greatest remap ever
-map("x", "<leader>p", '"_dP', {desc = "Paste over void"})
-
+-- Yank and Paste
+map("v", "<leader>v", '"_dP', {desc = "Paste over void"})
+map({"n", "v"}, "<leader>y", '"+y', {desc = "Yank to System clipboard"})
+map({"n", "v"}, "<leader>p", '"*p', {desc = "Paste to System clipboard"})
 map("n", "Q", "<nop>")
