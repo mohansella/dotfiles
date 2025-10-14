@@ -3,15 +3,6 @@ require("mason").setup()
 require("mason-lspconfig").setup({
   automatic_installation = true
 })
-local lspconfig = require("lspconfig")
-
--- Set up lspconfig.
--- https://github.com/neovim/nvim-lspconfig/blob/master/doc/configs.md
-local capabilities = require('cmp_nvim_lsp').default_capabilities()
-lspconfig.lua_ls.setup {capabilities = capabilities} -- lua
-lspconfig.dartls.setup {capabilities = capabilities} -- dart
-lspconfig.clangd.setup {capabilities = capabilities} -- c, cpp
-lspconfig.ts_ls.setup {capabilities = capabilities} -- javascript
 
 -- treesitter config
 require('nvim-treesitter.configs').setup({
