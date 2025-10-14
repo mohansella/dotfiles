@@ -37,6 +37,7 @@ local m = {
   {
     --smooth scrolling
     "declancm/cinnamon.nvim",
+    enabled = false, --disabled by default
     opts = {
       keymaps = {
         basic = true,
