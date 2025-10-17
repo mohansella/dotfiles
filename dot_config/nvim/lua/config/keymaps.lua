@@ -59,6 +59,13 @@ map({ 'n', 'v' }, '<leader>cr', '<cmd>:lua vim.lsp.buf.rename()<cr>', { desc = '
 map({ 'n', 'v' }, '<leader>cd', function() vim.diagnostic.open_float(nil, { scope = "line" }) end, { desc = 'Line Diagnostics' })
 map({ 'n', 'v' }, '<leader>ca', '<cmd>:lua vim.lsp.buf.code_action()<cr>', { desc = 'Code Action' })
 
+-- quick fix list
+map("n", "<leader>df", vim.diagnostic.setqflist, { desc = "Send LSP diagnostics to quickfix" })
+map("n", "<leader>do", ":copen<CR>", { desc = "Open quickfix list" })
+map("n", "<leader>dc", ":cclose<CR>", { desc = "Close quickfix list" })
+map("n", "<leader>dn", ":cnext<CR>", { desc = "Next diagnostic" })
+map("n", "<leader>dp", ":cprev<CR>", { desc = "Previous diagnostic" })
+
 -- undo tree
 map("n", "<leader>u", '<cmd>UndotreeToggle<cr><cmd>UndotreeFocus<cr>', {desc = "Toggle Undo Tree"})
 
