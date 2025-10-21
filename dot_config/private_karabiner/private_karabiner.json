@@ -6,25 +6,40 @@
       "virtual_hid_keyboard": {
         "keyboard_type_v2": "ansi"
       },
-      "simple_modifications": [
-        {
-          "from": {
-            "key_code": "caps_lock"
-          },
-          "to": [
-            {
-              "key_code": "left_shift",
-              "modifiers": [
-                "left_command",
-                "left_control",
-                "left_option"
-              ]
-            }
-          ]
-        }
-      ],
+      "simple_modifications": [],
       "complex_modifications": {
         "rules": [
+          {
+            "description": "Caps Lock: Hyper Key (hold) or Escape (tap)",
+            "manipulators": [
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "caps_lock",
+                  "modifiers": {
+                    "optional": [
+                      "any"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "left_shift",
+                    "modifiers": [
+                      "left_command",
+                      "left_control",
+                      "left_option"
+                    ]
+                  }
+                ],
+                "to_if_alone": [
+                  {
+                    "key_code": "escape"
+                  }
+                ]
+              }
+            ]
+          },
           {
             "description": "Caps+L → Alacritty",
             "manipulators": [
