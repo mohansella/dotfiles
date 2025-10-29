@@ -41,40 +41,6 @@
             ]
           },
           {
-            "description": "Alacritty ONLY: Spacebar as Control (hold) or Space (tap)",
-            "manipulators": [
-              {
-                "type": "basic",
-                "from": {
-                  "key_code": "spacebar",
-                  "modifiers": {
-                    "optional": [
-                      "any"
-                    ]
-                  }
-                },
-                "to": [
-                  {
-                    "key_code": "left_control"
-                  }
-                ],
-                "to_if_alone": [
-                  {
-                    "key_code": "spacebar"
-                  }
-                ],
-                "conditions": [
-                  {
-                    "type": "frontmost_application_if",
-                    "bundle_identifiers": [
-                      "^org\\.alacritty$"
-                    ]
-                  }
-                ]
-              }
-            ]
-          },
-          {
             "description": "Caps+L → Alacritty",
             "manipulators": [
               {
