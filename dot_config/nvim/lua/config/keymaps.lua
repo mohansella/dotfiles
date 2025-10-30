@@ -28,7 +28,7 @@ map({ 'n', 'v' }, '<leader>w', '<cmd>w<cr>', { desc = 'Write current buffer' })
 map({ 'n', 'v' }, '<leader>W', '<cmd>wa<cr>', { desc = 'Write all buffers' })
 
 -- Lazy
-map({ 'n', 'v' }, '<leader>l', '<cmd>Lazy<cr>', { desc = 'Open Lazy' })
+map({ 'n', 'v' }, '<leader>la', '<cmd>Lazy<cr>', { desc = 'Open Lazy' })
 
 -- Mason
 map({ 'n', 'v' }, '<leader>cm', '<cmd>Mason<cr>', { desc = 'Open Mason' })
