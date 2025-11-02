@@ -113,30 +113,6 @@
             ]
           },
           {
-            "description": "Caps+I → iTerm2",
-            "manipulators": [
-              {
-                "type": "basic",
-                "from": {
-                  "modifiers": {
-                    "mandatory": [
-                      "control",
-                      "option",
-                      "command",
-                      "shift"
-                    ]
-                  },
-                  "key_code": "i"
-                },
-                "to": [
-                  {
-                    "shell_command": "open -a iTerm"
-                  }
-                ]
-              }
-            ]
-          },
-          {
             "description": "Caps+G → ChatGPT",
             "manipulators": [
               {
@@ -155,6 +131,30 @@
                 "to": [
                   {
                     "shell_command": "open -a 'ChatGPT'"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "Caps+Semicolon → me.msella.*",
+            "manipulators": [
+              {
+                "type": "basic",
+                "from": {
+                  "modifiers": {
+                    "mandatory": [
+                      "control",
+                      "option",
+                      "command",
+                      "shift"
+                    ]
+                  },
+                  "key_code": "semicolon"
+                },
+                "to": [
+                  {
+                    "shell_command": "osascript -e 'tell application \"System Events\" to if exists (first process whose bundle identifier starts with \"me.msella\") then set frontmost of first process whose bundle identifier starts with \"me.msella\" to true'"
                   }
                 ]
               }
