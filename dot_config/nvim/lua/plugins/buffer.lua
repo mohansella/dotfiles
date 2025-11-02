@@ -16,7 +16,7 @@ local M = {
       },
       navigate = {
         under_cursor = " ",
-        cancel_snipe = "q"
+        cancel_snipe = {"q", "<esc>"}
       },
       sort = "last"
     }
