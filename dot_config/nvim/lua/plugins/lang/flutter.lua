@@ -2,6 +2,11 @@ local M = {
   {
     'nvim-flutter/flutter-tools.nvim',
     opts = {
+      dev_log = {
+        enabled = true,
+        autostart = false,
+        open_cmd = "edit",
+      },
       lsp = {
         on_attach = function(_, bufnr)
           local map = vim.keymap.set
@@ -25,12 +30,14 @@ local M = {
     -- setup config to quit spawned flutter process
     config = function(_, opts)
       require("flutter-tools").setup(opts)
+      require("telescope").load_extension("flutter")
+
+      -- flutter quit on vim exit
       vim.api.nvim_create_autocmd("VimLeavePre", {
         callback = function()
           pcall(vim.cmd, "FlutterQuit")
         end,
       })
-      require("telescope").load_extension("flutter")
     end
   }
 }
