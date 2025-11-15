@@ -23,6 +23,8 @@ map("n", "<Esc>", "<cmd>noh<cr><cmd>:NoiceDismiss<cr>", { desc = "general clear 
 map({ 'n', 'v' }, '<leader>qq', '<cmd>qa<cr>', { desc = 'Quit all' })
 map({ 'n', 'v' }, '<leader>qf', '<cmd>qa!<cr>', { desc = 'Force Quit all' })
 map({ 'n', 'v' }, '<leader>qw', '<cmd>wqa<cr>', { desc = 'Save and Quit all' })
+map({ 'n', 'v' }, "<leader>qb", '<cmd>bd<cr>', { desc = "Close current buffer" })
+map({ 'n', 'v' }, "<leader>qB", '<cmd>%bd | e# | bd#<cr>', { desc = "Close other buffers" })
 map({ 'n', 'v' }, '<leader>x', '<cmd>close<cr>', { desc = 'Close current window' })
 map({ 'n', 'v' }, '<leader>w', '<cmd>w<cr>', { desc = 'Write current buffer' })
 map({ 'n', 'v' }, '<leader>W', '<cmd>wa<cr>', { desc = 'Write all buffers' })
@@ -54,16 +56,18 @@ map({ 'n', 'v' }, 'gd', '<cmd>Telescope lsp_definitions<cr>', { desc = 'Goto Def
 map({ 'n', 'v' }, 'gr', '<cmd>Telescope lsp_references<cr>', { desc = 'References' })
 map({ 'n', 'v' }, 'gI', '<cmd>Telescope lsp_implementations<cr>', { desc = 'Goto Implementation' })
 map({ 'n', 'v' }, 'gy', '<cmd>Telescope lsp_type_definitions<cr>', { desc = 'Goto T[y]pe definitions' })
-map({ 'n', 'v' }, '<leader>cf', function() require("conform").format({ lsp_fallback = true }) end, { desc = 'Format using conform' })
+map({ 'n', 'v' }, '<leader>cf', function() require("conform").format({ lsp_fallback = true }) end,
+  { desc = 'Format using conform' })
 map({ 'n', 'v' }, '<leader>cr', '<cmd>:lua vim.lsp.buf.rename()<cr>', { desc = 'Rename' })
-map({ 'n', 'v' }, '<leader>cd', function() vim.diagnostic.open_float(nil, { scope = "line" }) end, { desc = 'Line Diagnostics' })
+map({ 'n', 'v' }, '<leader>cd', function() vim.diagnostic.open_float(nil, { scope = "line" }) end,
+  { desc = 'Line Diagnostics' })
 map({ 'n', 'v' }, '<leader>ca', '<cmd>:lua vim.lsp.buf.code_action()<cr>', { desc = 'Code Action' })
 
 -- quick fix list
 map("n", "<leader>cq", vim.diagnostic.setqflist, { desc = "Send LSP diagnostics to quickfix" })
 
 -- undo tree
-map("n", "<leader>u", '<cmd>UndotreeToggle<cr><cmd>UndotreeFocus<cr>', {desc = "Toggle Undo Tree"})
+map("n", "<leader>u", '<cmd>UndotreeToggle<cr><cmd>UndotreeFocus<cr>', { desc = "Toggle Undo Tree" })
 
 -- aerial nav
 map({ 'n', 'v' }, '<leader>a', '<cmd>AerialOpen<cr>', { desc = 'Open AerialNav' })
@@ -81,7 +85,7 @@ map("n", "N", "Nzzzv")
 
 
 -- Yank and Paste
-map("v", "<leader>v", '"_dP', {desc = "Paste over void"})
-map({"n", "v"}, "<leader>y", '"+y', {desc = "Yank to System clipboard"})
-map({"n", "v"}, "<leader>p", '"*p', {desc = "Paste to System clipboard"})
+map("v", "<leader>v", '"_dP', { desc = "Paste over void" })
+map({ "n", "v" }, "<leader>y", '"+y', { desc = "Yank to System clipboard" })
+map({ "n", "v" }, "<leader>p", '"*p', { desc = "Paste to System clipboard" })
 map("n", "Q", "<nop>")
