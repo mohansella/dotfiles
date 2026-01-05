@@ -2,10 +2,12 @@ local M = {
   { "mason-org/mason.nvim" },
   { "mason-org/mason-lspconfig.nvim" },
   { "neovim/nvim-lspconfig" },
-  { 'stevearc/conform.nvim', opts = {} },
+  { 'stevearc/conform.nvim',         opts = {} },
   {
     'stevearc/aerial.nvim',
-    opts = {},
+    opts = {
+      backends = { "lsp", "treesitter" },
+    },
     dependencies = {
       "nvim-treesitter/nvim-treesitter",
       "nvim-tree/nvim-web-devicons"
