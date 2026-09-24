@@ -9,7 +9,7 @@ Below are the steps for both MacOS 💻 and Ubuntu 🖥 (hoping other linux dist
 6. 💻🖥 Auth git via browser `gh auth login`
 7. 💻🖥 Setup github ssh with generate: `ssh-keygen -t rsa -b 4096 -C "your_email@example.com"`, start agent: `eval "$(ssh-agent -s)"` and add key: `ssh-add ~/.ssh/id_rsa`
 8. 💻🖥 Install chezmoi `brew install chezmoi`
-9. 💻🖥 Initialize chezmoi `chezmoi init git@github.com:mohansella/dotfiles.git`.
+9. 💻🖥 Initialize chezmoi `chezmoi init https://github.com/mohansella/dotfiles.git`.
 10. 💻🖥 Apply chezmoi selectively in a directory `chezmoi apply .` or `chezmoi update` as a whole.
 
 ## Mac Doc Setup 
