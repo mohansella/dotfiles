@@ -18,7 +18,7 @@ export PATH=$PATH:$ANDROID_SDK_ROOT/platform-tools
 export PATH=$PATH:$ANDROID_SDK_ROOT/tools
 
 #include rust
-export PATH=$PATH:~/.cargo/bin
+export PATH=$PATH:$HOME/.cargo/bin
 
 # Added by `rbenv init` on Wed Oct 30 16:29:16 IST 2024
 eval "$(rbenv init - --no-rehash zsh)"
@@ -27,3 +27,6 @@ eval "$(rbenv init - --no-rehash zsh)"
 export NVM_DIR="$HOME/.nvm"
 [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
 [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
+
+#Laravel
+export PATH=$PATH:$HOME/.composer/vendor/bin
